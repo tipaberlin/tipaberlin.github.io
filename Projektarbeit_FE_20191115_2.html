@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Projektarbeit Falk Erzgräber</title>
+		<link href="seitendesign.css" rel="stylesheet">
+		<style>
+		</style>
+		
+	</head>	
+		
+	<body>
+		
+		<h1><center>WÜRFELSPIEL</center></h1>
+	
+		<h2><center>
+			<script>
+			
+				var anzahl ;
+			
+				var d = new Date();
+				var tag = d.getDate();
+				var monat = d.getMonth() + 1;
+				var jahr = d.getFullYear();
+				var heute = tag + "." + monat + "." + jahr;
+				document.write( "<b>", heute ,"<br>" );
+			
+			</script>
+		
+		Heute ist der perfekte Tag zum Würfeln!!</center></h2>
+		
+		<div id="box6">
+			<img src="Bilder/Wuerfel1.jpg" width="320" height="280" 
+			alt="Logo für Projektarbeit"
+			title="jetzt Würfeln"> 	
+		</div>
+		
+		<img src="Bilder/Hintergrund.jpg"
+		class="hinterbild"		
+		alt="Hintergrundbild"
+		title="Hintergrund">
+		
+ 
+		<div id="box2">			
+			<center>Ich bin heute Dein Gegner!
+			<img src="Bilder/katze1.jpg" width="320" height="275" 
+			alt="Logo für Projektarbeit"
+			title="Gegner"> 
+		</div>
+		
+		<div id="box1">
+		
+			<form name="guthaben">
+					
+				<p>
+				
+					<center>Gib ein wie hoch Deine Startguthaben sein soll:
+					<input type="number" name="stg"><br> 
+					
+					
+  </select>
+					<center>Gib ein wie hoch das Gegner Startguthaben sein soll:
+					<input type="number" name="gstg"> 
+				
+				</p>
+				
+			</form>
+	
+			<form name="Spielzahl" >
+			Wie hoch sollen Dein Einsatz sein?
+			
+			<input type="text" name="display" ><br>
+			<input type="button" value="10" onclick="this.form.display.value += this.value; anzahl = this.value; " >
+			<input type="button" value="20" onclick="this.form.display.value += this.value; anzahl = this.value;" >
+			<input type="button" value="30" onclick="this.form.display.value += this.value; anzahl = this.value;" >
+			<input type="button" value="40" onclick="this.form.display.value += this.value; anzahl = this.value;" >
+			<input type="button" value="50" onclick="this.form.display.value += this.value; anzahl = this.value;"  >
+			<input type="button" value="60" onclick="this.form.display.value += this.value; anzahl = this.value;"  >
+			<input type="button" value="C" onclick="this.form.display.value = '' ;anzahl = this.value; "  ><br>			
+			</form>
+		
+		</div>
+			
+			<audio id="myAudio">
+			<source src="Musik/wuerfeln.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+
+		<h5>
+				
+		
+		<script>
+					
+			var indexnr = 0;
+		    var bilderarray = new Array();
+				bilderarray[0] = "Bilder/wuerf1.png";
+				bilderarray[1] = "Bilder/wuerf2.png";
+				bilderarray[2] = "Bilder/wuerf3.png";
+				bilderarray[3] = "Bilder/wuerf4.png";
+				bilderarray[4] = "Bilder/wuerf5.png";
+				bilderarray[5] = "Bilder/wuerf6.png";
+			
+			
+			
+			
+			
+			function start()											// Auswahl Spieler in Box anzeigen
+			{
+				
+				var Wert1 = document.guthaben.stg.value*1;				// Startguthaben
+				var Wert2 = 4;
+				var einsatzstart = document.Spielzahl.display.value*1; //Starteinsatzhöhe
+				
+				abc.innerHTML = "Dein Guthaben beträgt : " + Wert1 + "<hr>" ;
+				cde.innerHTML = "Der Kontroll- Wert2 : " + Wert2 + "<br>" ; //Nur zur Ausgabekontrolle!!!  Platzhalter
+				
+				if (einsatzstart<=Wert1+1){					// ist Starteinsatz höher als Startguthaben??
+						document.getElementById("efg").innerHTML = "Die Höhe Deiner Einsätze lautet: " + document.Spielzahl.display.value ;
+						}
+					else{
+						document.getElementById("fgh").innerHTML = "Dein Einsatz übersteigt dein Budget! : " + document.Spielzahl.display.value ;
+						}
+						
+				return Wert1;
+			}
+			
+			
+			
+			function startgegner()										// Auswahl Gegner in Box anzeigen
+			{
+				var Wert3 = document.guthaben.gstg.value*1;				// Startguthaben Gegner = Startguthaben Spieler
+				var Wert5;
+
+				do {
+																		// ist Starteinsatz höher als Startguthaben??	
+						var Wert4 = Math.floor(Math.random()*6) + 1;	//Ermittlung Einsatzhöhe Gegner
+						Wert5 = Wert4*10;								//Höhe Einsätze Gegner
+			
+					} while (Wert5>Wert3)
+			
+				xyz.innerHTML = "Das Gegner- Guthaben war : " + Wert3 + "<hr>" ;
+				uvw.innerHTML = "Die Höhe seines Einsatzes war : " + Wert5 + "<br>" ;
+				
+			return Wert5;
+			}
+							
+			
+			function gegwuerfeln(){										//Gegner würfelt
+			
+				wurfgegner = Math.floor(Math.random()*6) + 1;
+				klm.innerHTML = "Der Gegner hat gewürfelt : " + wurfgegner + "<hr>" ;
+				
+				return wurfgegner;										//Würfelergebnis Gegner
+				}
+			
+			function spiewuerfeln(){									//Spieler würfelt
+			
+				var wurfspieler =Math.random();
+				wurfspieler *= 6;
+			
+				wurfspieler = Math.floor( wurfspieler)+1;
+				
+				hij.innerHTML = "Du hast gewürfelt : " + wurfspieler + "<br>" ;
+				
+				
+				
+				return wurfspieler;										//Würfelergebnis Spieler
+				}
+				
+				
+			
+			function spiegewinnberechnung(wurfspieler,wurfgegner){		//erhält gewürfelte Ergebnisse
+				
+				var einsatz = document.Spielzahl.display.value *1;		//Einsatzhöhe Spieler
+				var erg = 0;
+				a = spiewuerfeln();
+				b = gegwuerfeln();
+				
+														//Zeigt den Würfel des Spielers!
+		
+						indexnr = a-1;
+							//alert("indexnr:" +indexnr);
+						var bildname = bilderarray[indexnr];
+						//alert("bildname:" +bildname);
+						
+						document.getElementById("Wuerfelspieleranz").style.backgroundImage = "url(" + bildname + ")";
+										
+														//Zeigt den Würfel des Gegners!
+								
+						indexnrg = b-1;
+							//alert("indexnr:" +indexnr);
+						var bildname = bilderarray[indexnrg];
+						//alert("bildname:" +bildname);
+						
+						document.getElementById("Wuerfelgegneranz").style.backgroundImage = "url(" + bildname + ")";		
+			
+		
+		
+				
+				
+				
+								
+					if(a<b)												//vergleicht die gewürfelten Punkte
+					{
+					erg= "Du hast verloren";
+					pkt= -einsatz;					
+					}
+						else if(a==b)
+							{
+							erg= "Gleichstand";
+							pkt=0;
+							}
+							else if (a>b)
+								{
+								erg= "Du hast gewonnen";
+								pkt=+einsatz;
+								}
+			
+					nop.innerHTML = "Das Ergebnis lautet : " + erg + "<hr>" ;
+					
+																		//Berechnet Gewinnhöhe Spieler
+																	
+					spiegewinn = pkt;									//Spielergewinn
+					
+				
+				return spiegewinn;
+				}
+					
+								
+			
+			function spieguthaben(spiegewinn){							//Guthabenverwaltung Spieler
+				
+				
+				var spielerguthaben = document.guthaben.stg.value*1;
+				
+				var gegnerguthaben = document.guthaben.gstg.value*1;
+				
+				var Punkte = 0;
+				
+				spielergewinn = spiegewinnberechnung();
+				
+				geinsatz = startgegner(); 								//Einsatzhöhe Gegner
+					
+					
+				kontostand = spielerguthaben + spielergewinn;
+				
+										
+					if (kontostand >0)
+							
+								{
+																		// aktuelles Guthaben
+								wxy.innerHTML = "Dein neuer Kontostand  lautet : " + kontostand + "<br>" ;
+								}
+
+								else if(kontostand<=0)
+									{
+									vwx.innerHTML = "Dein Geld ist alle ! " + kontostand + "<br>" ;
+									alert('So ein Pech! Verlierer!');
+									}		
+							
+				
+				
+				
+									if(spielergewinn>0)					//vergleicht die gewürfelten Punkte über Gewinn Spieler
+										{
+											punkte = gegnerguthaben - geinsatz;				
+										}
+										else if(spielergewinn == 0)
+											{
+												
+												punkte = gegnerguthaben;
+											}
+											else if (spielergewinn<0)
+												{
+													punkte = gegnerguthaben + geinsatz;	
+												}
+					
+					
+								if(punkte<=0)
+									{
+										qrs.innerHTML = "Dein Gegner ist pleite ! Sein Kontostand beträgt nur:" + punkte + "<br>" ;
+										alert('Glückwunsch! Du hast gewonnen!');
+									}
+											else if (punkte>0)
+											{
+												rst.innerHTML = "Der neue Gegner- Kontostand  lautet : " + punkte + "<br>" ;
+											}
+									
+						document.guthaben.stg.value = kontostand;		// Neuer Kontostand Spieler wird zugewiesen
+						
+						document.guthaben.gstg.value = punkte;			// Neuer Kontostand Gegner wird zugewiesen
+				 
+					
+					
+				
+						 playAudio(); 
+				
+				return spiekontostand;
+				}
+			
+			
+			//var x = document.getElementById("myAudio"); 
+				function playAudio() { 
+					
+					var x = document.getElementById("myAudio"); 
+					x.play(); 
+					}
+			
+					
+			function losgehts (){
+					
+					spieguthaben();
+					
+					
+				}
+			
+		</script>
+				
+		</h5>
+		</div>
+	
+	<body>
+	<div id="box4">	
+		<center><button onclick="start();" >Auswahl notieren</button>
+		<div id="abc" ></div>
+		<div id="cde" ></div>
+		<div id="efg" ></div>
+		<div id="fgh" ></div>
+	</div>
+	
+<style></style>
+	</body>
+	
+	<body>
+	<div id="box5">	
+		<center><button onclick="startgegner();" >Auswahl Gegner anzeigen</button>
+		<div id="xyz" ></div>
+		<div id="uvw" ></div>
+	</div>
+	
+<style></style>
+	</body>
+	
+	<body>
+	<div id="box3">	
+		<center>
+		<div id="hij" ></div>
+		<right><div id="klm" ></div>
+		<div id="nop" ></div>
+		<div id="vwx" ></div>
+		<div id="stu" ></div>
+		<div id="wxy" ></div>
+		<div id="vwx" ></div>
+		<div id="qrs" ></div>
+		<div id="rst" ></div>
+		<div id="chk" ></div>
+
+
+	</div>
+	
+	<div id="los" style="background-image:url(Bilder/wuerfelbecher2.jpg);
+		background-size:cover;cursor:pointer"onClick="losgehts();">
+			
+	</div>
+	
+	
+	<div id="Wuerfelspieleranz" style="background-image:url(Bilder/wuerf1.png);background-size:cover;cursor:pointer" ></div>>	
+		<center><button onclick="" >Würfel Spieler zeigen zeigen</button>
+		
+	</div>
+	
+	<div id="Wuerfelgegneranz" style="background-image:url(Bilder/wuerf1.png);background-size:cover;cursor:pointer" ></div>>	
+		<center><button onclick="" >Gegner zeigen zeigen</button>
+		
+	</div>
+	</body>
+	
+</html>

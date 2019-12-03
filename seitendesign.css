@@ -1,0 +1,140 @@
+h1 {
+    //color: red;
+    background-image: url("Bilder/design5.jpg");
+	border-color: green;
+	border-width: 5px;
+	border-style: groove;
+	color:red;   /* Farbe rot */
+	font-size:36pt;  /* Größe 28pt   */
+	font-family:arial, "lucida console", sans-serif; /* Schriftart */	
+}
+
+h2 {
+	background-image: url("Bilder/design5.jpg");
+	border-color: green;
+	border-width: 5px;
+	border-style: groove;
+	color:orange;   /* Farbe weiß */
+	font-size:20pt;  /* Größe 28pt   */
+	font-family:arial, "lucida console", sans-serif; /* Schriftart */	
+}
+
+h3 {
+	border-color: green;
+	background-color: yellow;
+	border-width: 5px;
+	border-style: groove;
+}
+#box1 {
+	background-image: url("Bilder/Hintergrund2.jpg");
+	border-color: green;
+	border-width: 5px;
+	border-style: groove;
+	background-color: orange;
+	position: absolute;
+	width: 450px;
+	height: 160px;
+	top: 230px;
+	left: 540px;
+}
+#box2 {
+	background-color: orange;
+	position: absolute;
+	width: 320px;
+	top: 220px;
+	left: 1100px
+}
+#box3 {
+	background-image: url("Bilder/Hintergrund4.jpg");
+	border-color: green;
+	border-width: 2px;
+	border-style: groove;
+	background-color: orange;
+	position: absolute;
+	width: 450px;
+	height: 190px;
+	top: 420px;
+	left: 540px;
+}
+
+#los {
+	
+	border-color: green;
+	border-width: 2px;
+	border-style: groove;
+	background-color: orange;
+	position: absolute;
+	width: 250px;
+	height: 230px;
+	top: 620px;
+	left: 640px;
+}
+
+#box4 {
+	border-color: green;
+border-width: 2px;
+border-style: groove;
+  background-color: orange;
+  position: absolute;
+  width: 235px;
+  height: 120px;
+  top: 490px;
+  left: 120px;
+}
+
+#box5 {
+	border-color: green;
+border-width: 2px;
+border-style: groove;
+  background-color: orange;
+  position: absolute;
+  width: 235px;
+  height: 120px;
+  top: 490px;
+  left: 1145px;
+}
+
+.hinterbild {
+	background-size:100% 100%;
+   background-position: absolute;
+ 
+
+}
+
+#box6 {
+	border-color: green;
+border-width: 2px;
+border-style: groove;
+  background-color: orange;
+  position: absolute;
+  width: 250px;
+  height: 185px;
+  top: 230px;
+  left:80px;
+}
+
+
+#Wuerfelspieleranz {
+	border-color: green;
+  border-width: 2px;
+  border-style: groove;
+  background-color: blue;
+  position: absolute;
+  width: 265px;
+  height: 250px;
+  top: 650px;
+  left:120px;
+}
+  
+ #Wuerfelgegneranz {
+	border-color: green;
+  border-width: 2px;
+  border-style: groove;
+  background-color: blue;
+  position: absolute;
+  width: 265px;
+  height: 250px;
+  top: 650px;
+  left:1145px;
+} 
+  
