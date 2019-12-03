@@ -15,7 +15,7 @@ h2 {
 	border-width: 5px;
 	border-style: groove;
 	color:orange;   /* Farbe weiß */
-	font-size:20pt;  /* Größe 28pt   */
+	font-size:20pt;  /* Größe 20pt   */
 	font-family:arial, "lucida console", sans-serif; /* Schriftart */	
 }
 
@@ -66,7 +66,7 @@ h3 {
 	position: absolute;
 	width: 250px;
 	height: 230px;
-	top: 620px;
+	top: 640px;
 	left: 640px;
 }
 
@@ -123,7 +123,7 @@ border-style: groove;
   width: 265px;
   height: 250px;
   top: 650px;
-  left:120px;
+  left:100px;
 }
   
  #Wuerfelgegneranz {
@@ -135,6 +135,6 @@ border-style: groove;
   width: 265px;
   height: 250px;
   top: 650px;
-  left:1145px;
+  left:1125px;
 } 
   
