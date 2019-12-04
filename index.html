@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Projekt FE</title>
+		<title>Projektarbeit Falk Erzgräber</title>
 		<link href="seitendesign.css" rel="stylesheet">
 		<style>
 		</style>
@@ -91,14 +91,15 @@
 		
 		<script>
 					
-			var indexnr = 0;
+			var indexnr = 1;
 		    var bilderarray = new Array();
-				bilderarray[0] = "Bilder/wuerf1.png";
-				bilderarray[1] = "Bilder/wuerf2.png";
-				bilderarray[2] = "Bilder/wuerf3.png";
-				bilderarray[3] = "Bilder/wuerf4.png";
-				bilderarray[4] = "Bilder/wuerf5.png";
-				bilderarray[5] = "Bilder/wuerf6.png";
+				bilderarray[1] = "Bilder/wuerf0.png";
+				bilderarray[2] = "Bilder/wuerf1.png";
+				bilderarray[3] = "Bilder/wuerf2.png";
+				bilderarray[4] = "Bilder/wuerf3.png";
+				bilderarray[5] = "Bilder/wuerf4.png";
+				bilderarray[6] = "Bilder/wuerf5.png";
+				bilderarray[7] = "Bilder/wuerf6.png";
 			
 			
 			
@@ -112,7 +113,7 @@
 				var einsatzstart = document.Spielzahl.display.value*1; //Starteinsatzhöhe
 				
 				abc.innerHTML = "Dein Guthaben beträgt : " + Wert1 + "<hr>" ;
-				cde.innerHTML = "Der Kontroll- Wert2 : " + Wert2 + "<br>" ; //Nur zur Ausgabekontrolle!!!  Platzhalter
+				//cde.innerHTML = "Der Kontroll- Wert2 : " + Wert2 + "<br>" ; //Nur zur Ausgabekontrolle!!!  Platzhalter
 				
 				if (einsatzstart<=Wert1+1){					// ist Starteinsatz höher als Startguthaben??
 						document.getElementById("efg").innerHTML = "Die Höhe Deiner Einsätze lautet: " + document.Spielzahl.display.value ;
@@ -178,7 +179,7 @@
 				
 														//Zeigt den Würfel des Spielers!
 		
-						indexnr = a-1;
+						indexnr = a+1;
 							//alert("indexnr:" +indexnr);
 						var bildname = bilderarray[indexnr];
 						//alert("bildname:" +bildname);
@@ -187,7 +188,7 @@
 										
 														//Zeigt den Würfel des Gegners!
 								
-						indexnrg = b-1;
+						indexnrg = b+1;
 							//alert("indexnr:" +indexnr);
 						var bildname = bilderarray[indexnrg];
 						//alert("bildname:" +bildname);
@@ -202,7 +203,7 @@
 								
 					if(a<b)												//vergleicht die gewürfelten Punkte
 					{
-					erg= "Du hast verloren";
+					erg= "Du hast verloren!";
 					pkt= -einsatz;					
 					}
 						else if(a==b)
@@ -212,11 +213,11 @@
 							}
 							else if (a>b)
 								{
-								erg= "Du hast gewonnen";
+								erg= "Du hast gewonnen!";
 								pkt=+einsatz;
 								}
 			
-					nop.innerHTML = "Das Ergebnis lautet : " + erg + "<hr>" ;
+					nop.innerHTML = " " + erg + "<hr>" ;
 					
 																		//Berechnet Gewinnhöhe Spieler
 																	
@@ -364,13 +365,13 @@
 	</div>
 	
 	
-	<div id="Wuerfelspieleranz" style="background-image:url(Bilder/wuerf1.png);background-size:cover;cursor:pointer" ></div>	
+	<div id="Wuerfelspieleranz" style="background-image:url(Bilder/wuerf0.png);background-size:cover;cursor:pointer" ></div>>	
 		
 		
 	</div>
 	
-	<div id="Wuerfelgegneranz" style="background-image:url(Bilder/wuerf1.png);background-size:cover;cursor:pointer" ></div>	
-		
+	<div id="Wuerfelgegneranz" style="background-image:url(Bilder/wuerf0.png);background-size:cover;cursor:pointer" ></div>>	
+	
 		
 	</div>
 	</body>

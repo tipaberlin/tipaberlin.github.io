@@ -28,7 +28,7 @@ h3 {
 #box1 {
 	background-image: url("Bilder/Hintergrund2.jpg");
 	border-color: green;
-	border-width: 5px;
+	border-width: 2px;
 	border-style: groove;
 	background-color: orange;
 	position: absolute;
@@ -38,7 +38,7 @@ h3 {
 	left: 540px;
 }
 #box2 {
-	background-color: orange;
+	background-image: url("Bilder/Hintergrauswahl2.png");
 	position: absolute;
 	width: 320px;
 	top: 220px;
@@ -55,6 +55,7 @@ h3 {
 	height: 190px;
 	top: 420px;
 	left: 540px;
+	font-size:17pt;  
 }
 
 #los {
@@ -74,7 +75,7 @@ h3 {
 	border-color: green;
 border-width: 2px;
 border-style: groove;
-  background-color: orange;
+  background-image: url("Bilder/Hintergrauswahl.png");
   position: absolute;
   width: 235px;
   height: 120px;
@@ -86,7 +87,7 @@ border-style: groove;
 	border-color: green;
 border-width: 2px;
 border-style: groove;
-  background-color: orange;
+  background-image: url("Bilder/Hintergrauswahl.png");
   position: absolute;
   width: 235px;
   height: 120px;
@@ -115,10 +116,7 @@ border-style: groove;
 
 
 #Wuerfelspieleranz {
-	border-color: green;
-  border-width: 2px;
-  border-style: groove;
-  background-color: blue;
+	
   position: absolute;
   width: 265px;
   height: 250px;
@@ -127,10 +125,7 @@ border-style: groove;
 }
   
  #Wuerfelgegneranz {
-	border-color: green;
-  border-width: 2px;
-  border-style: groove;
-  background-color: blue;
+	
   position: absolute;
   width: 265px;
   height: 250px;
