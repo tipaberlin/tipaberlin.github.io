@@ -1,6 +1,8 @@
 h1 {
     //color: red;
     background-image: url("Bilder/design5.jpg");
+	background-size:100%;
+   background-position: absolute;
 	border-color: green;
 	border-width: 5px;
 	border-style: groove;
@@ -11,6 +13,7 @@ h1 {
 
 h2 {
 	background-image: url("Bilder/design5.jpg");
+	background-size:100%;
 	border-color: green;
 	border-width: 5px;
 	border-style: groove;
