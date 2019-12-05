@@ -135,4 +135,14 @@ border-style: groove;
   top: 650px;
   left:1125px;
 } 
-  
+  #drehobject{
+	background-image: url("Bilder/wuerfelrund5.png");
+	background-size:100% 100%;
+	width:145px;
+	height:135px;
+	position:absolute;
+	left:695px;
+	top:790px;
+	/*background-color:#000;*/
+	
+	}

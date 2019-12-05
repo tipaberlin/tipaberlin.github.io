@@ -307,11 +307,48 @@
 					x.play(); 
 					}
 			
+		var nee =0;		
+		
+		var zpos=0;
+		
+		
+				
+		 function f_objdrehen(){
+				
+		
+			
+			if(nee<100){
+				zpos++;
+			
+				if(zpos>359)zpos=0;
+				var dz=document.getElementById("drehobject");
+	
+					dz.style.MsTransform = "rotate("+zpos+1+"deg) translate(-5px,0)";
+					dz.style.MozTransform = "rotate("+zpos+1+"deg) translate(-5px,0)";
+					dz.style.OTransform = "rotate("+zpos+1+"deg) translate(-5px,0)";
+					dz.style.WebkitTransform = "rotate("+zpos+1+"deg) translate(-5px,0)";
+					dz.style.transform = "rotate("+zpos+1+"deg) translate(-5px,0)";
+					
+					
+					
+					
+				nee = nee +1;
+				window.setTimeout("f_objdrehen()", 14);
+				}
+				
+				else{
+				
+					nee = 0;
+				}
+				}
+			
+			
+			
 					
 			function losgehts (){
-					
+					f_objdrehen();
 					spieguthaben();
-					
+					//f_objdrehen();
 					
 				}
 			
@@ -365,15 +402,15 @@
 	</div>
 	
 	
-	<div id="Wuerfelspieleranz" style="background-image:url(Bilder/wuerf0.png);background-size:cover;cursor:pointer" ></div>>	
+	<div id="Wuerfelspieleranz" style="background-image:url(Bilder/wuerf0.png);background-size:cover;cursor:pointer" ></div>	
 		
 		
 	</div>
 	
-	<div id="Wuerfelgegneranz" style="background-image:url(Bilder/wuerf0.png);background-size:cover;cursor:pointer" ></div>>	
+	<div id="Wuerfelgegneranz" style="background-image:url(Bilder/wuerf0.png);background-size:cover;cursor:pointer" ></div>	
 	
-		
-	</div>
+	<div id="drehobject"  style="cursor:pointer" onClick="f_objdrehen();"</div>	
+	
 	</body>
 	
 </html>
